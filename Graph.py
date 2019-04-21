@@ -11,6 +11,7 @@ class Graph:
     def __init__(self, nodoInicial=None):
         self.nodos = set(nodoInicial)
         self.conecciones = {}
+        self.isDirected = True
 #        self.isDirected = Directed
         if (nodoInicial is not None):
             self.conecciones[nodoInicial] = list()
