@@ -25,12 +25,12 @@ class Graph:
         else:
             raise Exception('error al crear una conexión: no existe el nodo en el grafo')
 #funcion para agregar nodo
-    def addNode(self, nodo):
-        if (nodo in self.nodos):
+    def addNode(self, nodoNuevo):
+        if (nodoNuevo in self.nodos):
             raise Exception('error al agregar nodo: el nodo ya existe en el grafo')
         else:
-            self.nodos.add(nodo)
-            self.conecciones[nodo] = list()
+            self.nodos.add(nodoNuevo)
+            self.conecciones[nodoNuevo] = list()
 #funcion de los nodos visitados
     def nodosVisitados(self):
         self.visitedNodes = dict.fromkeys(self.nodos, False)
